@@ -1,0 +1,83 @@
+.search-container {
+  text-align: center;
+  transition: all 0.5s ease;
+  position: fixed;
+  bottom: 45%;
+}
+
+.search-container.active {
+  bottom: 5%;
+  top: auto; /* Switch from bottom to top positioning */
+}
+
+/* Initial state */
+.title {
+  transition: opacity 0.5s;
+  opacity: 1;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* Fade out state */
+.title.fade-out {
+  opacity: 0;
+  visibility: hidden; /* Hides the element after the opacity transition finishes */
+  overflow: hidden; /* Prevents content from overflowing during transition */
+}
+
+.search-bar {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 24px;
+  background: rgb(252, 252, 249);
+  border: 1px solid #dcdcdc; /* Soft outline */
+  width: 600px;
+  height: 50px;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 24px;
+  background: rgb(252, 252, 249);
+}
+
+.search-bar .search-btn {
+  color: rgb(100, 100, 95); /* Typically, button icons stay white for contrast */
+  background-color: rgb(229, 231, 235);
+  border: none;
+  margin-left: 8px;
+  padding: 0;
+  width: 38px; /* Circular button */
+  height: 38px; /* Circular button */
+  border-radius: 50%; /* Makes the button round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-bar .search-btn:hover,
+.search-bar .search-btn:focus {
+  background-color: rgb(238, 240, 245);
+}
+
+.search-bar .search-btn .icon {
+  font-size: 20px; /* Adjust icon size as needed */
+  line-height: 1; /* Ensures the icon is centered */
+}
+
+/* Resetting input field styles to ensure consistency */
+.search-bar input[type="text"] {
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 24px;
+  width: 100%; /* Take up available space */
+  -webkit-appearance: none; /* Removes default styles on Safari */
+}

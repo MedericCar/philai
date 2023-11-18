@@ -1,0 +1,53 @@
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 280px; /* Adjust to your preferred width */
+  height: 180px; /* Adjust to your preferred height */
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  position: relative;
+  overflow: hidden; /* Ensures the overlay fits within the border radius */
+}
+
+.suggestion:hover {
+  transform: translateY(-2px);
+}
+
+.suggestion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  border-radius: 8px;
+  z-index: 1; /* Lower z-index than text to ensure text is on top */
+}
+
+.suggestion-text { /* Container for text to manage z-index */
+  position: relative;
+  z-index: 2; /* Higher z-index to bring text above the overlay */
+}
+
+.suggestion-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.suggestion-date {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+.suggestion-description {
+  font-size: 0.9em;  
+}

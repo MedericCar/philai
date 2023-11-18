@@ -1,0 +1,25 @@
+Here is the result of your search:
+---------------------
+{observation}
+
+USER INPUT
+--------------------
+With that new knowledge, finish the discussion, do not make another search.
+You must not mention the search results that I provide you in the answer. Instead, only mention that you retrieved the information from the database.
+Remember to respond with a markdown code snippet of a json blob, and NOTHING else - even if you just want to respond to the user. Do NOT respond with anything except a JSON snippet no matter what!
+
+Here is the expected output
+```json
+
+{{
+
+"action": "Final Answer",
+
+"action_input": 
+    "{{
+        "answer": required string, You should put the answer message you want to return here.
+        "projectUUIDs": required string, If you mention projects, put their UUIDs as a string concatenation with comma. Otherwise put an empty string.
+    }}" required string your response
+}}
+
+```

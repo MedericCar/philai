@@ -1,0 +1,29 @@
+.answer {
+  border: 5%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  text-align: left; /* Ensure text within children is centered */
+}
+
+.answer-container {
+  width: 70%;
+  align-content: center;
+}
+
+.answer-container h1 {
+  padding: 0%;
+  margin-top: 0%;
+  font-size: 20px;
+}
+
+.suggestions-container {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Or 'space-around' depending on your layout */
+  flex-wrap: wrap; /* Allows suggestions to wrap onto the next line on small screens */
+}
